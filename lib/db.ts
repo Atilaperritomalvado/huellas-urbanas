@@ -1,9 +1,8 @@
 import { Pool } from "pg";
 
 export const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "huellas_urbanas",
-  password: "postgres",
-  port: 5433,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });

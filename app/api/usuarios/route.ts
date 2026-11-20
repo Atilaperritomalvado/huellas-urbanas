@@ -9,14 +9,16 @@ export async function GET() {
 
     return NextResponse.json(resultado.rows);
   } catch (error) {
-    console.error(error);
+   console.error(error);
 
-    return NextResponse.json(
-      { error: "Error al obtener usuarios" },
-      { status: 500 }
-    );
+return NextResponse.json(
+  {
+    error,
+  },
+  { status: 500 }
+  );
   }
-}
+  }
 
 export async function POST(req: Request) {
   try {

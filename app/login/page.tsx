@@ -12,13 +12,19 @@ export default function Login() {
   const iniciarSesion = async () => {
     try {
       const respuesta = await fetch("/api/usuarios");
-      const usuarios = await respuesta.json();
+     const usuarios = await respuesta.json();
 
-      const usuario = usuarios.find(
-        (u: any) =>
-          u.email === email &&
-          u.password === password
-      );
+    if (!Array.isArray(usuarios)) {
+    console.error(usuarios);
+    alert("Error al obtener usuarios");
+    return;
+    }
+
+   const usuario = usuarios.find(
+     (u: any) =>
+      u.email === email &&
+      u.password === password
+     );
 
       if (!usuario) {
         alert("Correo o contraseña incorrectos");

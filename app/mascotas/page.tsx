@@ -27,9 +27,11 @@ export default function Mascotas() {
       `/api/mascotas?usuario_id=${usuario.id}`
     );
 
-    const datos = await respuesta.json();
+   const datos = await respuesta.json();
 
-    setMascotas(datos);
+      setMascotas(
+      Array.isArray(datos) ? datos : []
+    );
   };
 
   useEffect(() => {

@@ -33,7 +33,9 @@ export default function Paseadores() {
     const respuesta = await fetch("/api/paseadores");
     const datos = await respuesta.json();
 
-    setPaseadores(datos);
+    setPaseadores(
+    Array.isArray(datos) ? datos : []
+    );
   };
 
   const cargarCalificaciones = async () => {
