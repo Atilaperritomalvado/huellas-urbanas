@@ -52,45 +52,55 @@ export default function Paseos() {
     cargarMascotas();
   }, []);
 
-  const cargarPaseos = async () => {
-    const usuario = JSON.parse(
-      localStorage.getItem("usuarioLogueado") || "{}"
-    );
+ const cargarPaseos = async () => {
+  const usuario = JSON.parse(
+    localStorage.getItem("usuarioLogueado") || "{}"
+   );
 
-    const respuesta = await fetch(
-      `/api/paseos?usuario_id=${usuario.id}`
-    );
+  const respuesta = await fetch(
+    `/api/paseos?usuario_id=${usuario.id}`
+   );
 
-    const datos = await respuesta.json();
+  const datos = await respuesta.json();
 
-    setPaseos(Array.isArray(datos) ? datos : []);
+   console.log("PASEOS:", datos);
+
+   setPaseos(
+    Array.isArray(datos) ? datos : []
+   );
   };
 
   const cargarPaseadores = async () => {
-    const respuesta = await fetch("/api/paseadores");
+  const respuesta = await fetch(
+    "/api/paseadores"
+  );
 
-    const datos = await respuesta.json();
+  const datos = await respuesta.json();
 
-    setPaseadores(
-      Array.isArray(datos) ? datos : []
-    );
+   console.log("PASEADORES:", datos);
+
+   setPaseadores(
+    Array.isArray(datos) ? datos : []
+   );
   };
 
-  const cargarMascotas = async () => {
-    const usuario = JSON.parse(
-      localStorage.getItem("usuarioLogueado") || "{}"
-    );
+   const cargarMascotas = async () => {
+   const usuario = JSON.parse(
+    localStorage.getItem("usuarioLogueado") || "{}"
+  );
 
-    const respuesta = await fetch(
-      `/api/mascotas?usuario_id=${usuario.id}`
-    );
+  const respuesta = await fetch(
+    `/api/mascotas?usuario_id=${usuario.id}`
+   );
 
-    const datos = await respuesta.json();
+   const datos = await respuesta.json();
 
-    setMascotas(
-      Array.isArray(datos) ? datos : []
+   console.log("MASCOTAS:", datos);
+
+   setMascotas(
+    Array.isArray(datos) ? datos : []
     );
-  };
+   };
 
   const guardarPaseo = async () => {
     if (

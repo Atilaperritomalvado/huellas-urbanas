@@ -55,37 +55,16 @@ export default function Calificaciones() {
             </option>
 
             <option value="1">
-              Carlos Gómez
-            </option>
-
-            <option value="2">
-              María Fernández
-            </option>
-
-            <option value="3">
-              Juan Pérez
-            </option>
-
-            <option value="4">
-              Lucía Romero
-            </option>
-
-            <option value="5">
-              Diego Molina
-            </option>
-
-            <option value="6">
               Valentina Ruiz
             </option>
 
-            <option value="7">
-              Martín Castro
+            <option value="2">
+             Sofía López
             </option>
 
-            <option value="8">
-              Sofía López
-            </option>
-
+             <option value="3">
+             María Fernández
+          </option>
           </select>
 
           <select
