@@ -106,12 +106,13 @@ export default function Mascotas() {
 
   return (
   <ProtectedRoute>
-    <main className="min-h-screen bg-gray-100 p-10">
-      <h1 className="text-4xl font-bold mb-10">
+   <main className="min-h-screen bg-gray-100 p-4 md:p-10">
+      <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-10">
+
         Mis Mascotas
       </h1>
 
-      <div className="bg-white p-8 rounded-xl shadow-lg max-w-2xl">
+        <div className="bg-white p-5 md:p-8 rounded-xl shadow-lg w-full max-w-2xl">
         <h2 className="text-2xl font-bold mb-6">
           Agregar Mascota
         </h2>
@@ -122,7 +123,7 @@ export default function Mascotas() {
             placeholder="Nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
-            className="border p-3 rounded-lg"
+            className="border p-4 rounded-lg text-base"
           />
 
           <input
@@ -130,7 +131,7 @@ export default function Mascotas() {
             placeholder="Raza"
             value={raza}
             onChange={(e) => setRaza(e.target.value)}
-            className="border p-3 rounded-lg"
+            className="border p-4 rounded-lg text-base"
           />
 
           <input
@@ -138,7 +139,7 @@ export default function Mascotas() {
             placeholder="Edad"
             value={edad}
             onChange={(e) => setEdad(e.target.value)}
-            className="border p-3 rounded-lg"
+            className="border p-4 rounded-lg text-base"
           />
 
           <button
@@ -147,7 +148,7 @@ export default function Mascotas() {
                 ? actualizarMascota
                 : guardarMascota
             }
-            className="bg-green-600 text-white p-3 rounded-lg font-bold"
+            className="bg-green-600 text-white p-4 rounded-lg font-bold text-lg"
           >
             {editandoId
               ? "Guardar Cambios"
@@ -157,6 +158,7 @@ export default function Mascotas() {
       </div>
 
       <div className="mt-10">
+
         <h2 className="text-3xl font-bold mb-6">
           Mascotas Registradas
         </h2>
@@ -165,9 +167,9 @@ export default function Mascotas() {
           {mascotas.map((mascota) => (
             <div
               key={mascota.id}
-              className="bg-white p-6 rounded-xl shadow-lg"
+              className="bg-white p-5 md:p-6 rounded-xl shadow-lg"
             >
-              <h3 className="text-xl font-bold">
+              <h3 className="text-lg md:text-xl font-bold">
                 🐕 {mascota.nombre}
               </h3>
 
@@ -175,7 +177,7 @@ export default function Mascotas() {
 
               <p>Edad: {mascota.edad} años</p>
 
-              <div className="flex gap-2 mt-4">
+              <div className="flex flex-col sm:flex-row gap-2 mt-4">
                 <button
                   onClick={() => {
                     setEditandoId(mascota.id);

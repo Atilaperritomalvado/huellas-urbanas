@@ -28,18 +28,18 @@ export default function Dashboard() {
   return (
   <ProtectedRoute>
 
-    <main className="min-h-screen bg-gray-100 p-10">
+    <main className="min-h-screen bg-gray-100 p-4 md:p-10">
 
-      <div className="flex justify-between items-center mb-8">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
 
         <div>
-          <h1 className="text-4xl font-bold">
+         <h1 className="text-3xl md:text-4xl font-bold">
             Panel de Usuario
           </h1>
 
           <p className="text-xl text-gray-600">
             Bienvenido {nombreUsuario}
-            <div className="grid grid-cols-4 gap-4 mt-8 mb-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 mb-10">
 
            <div className="bg-white rounded-xl shadow-lg p-4 text-center">
            <div className="text-3xl">🐕</div>
@@ -74,11 +74,11 @@ export default function Dashboard() {
 
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <a
           href="/paseadores"
-          className="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-8 rounded-2xl shadow-xl block hover:scale-105 transition" 
+          className="bg-gradient-to-r from-slate-700 to-slate-900 text-white p-6 p-8 rounded-2xl shadow-xl block hover:scale-105 transition" 
          >
         <h2 className="text-2xl font-bold mb-3">
           👨‍🦱 Paseadores
@@ -91,7 +91,7 @@ export default function Dashboard() {
 
         <a
           href="/mascotas"
-          className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
+          className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
         >
           <h2 className="text-2xl font-bold mb-3">
             🐕 Mis Mascotas
@@ -104,7 +104,7 @@ export default function Dashboard() {
 
         <a
           href="/paseos"
-          className="bg-gradient-to-r from-green-600 to-emerald-500 text-white p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
+          className="bg-gradient-to-r from-green-600 to-emerald-500 text-white p-6m p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
         >
           <h2 className="text-2xl font-bold mb-3">
             📅 Mis Paseos
@@ -117,7 +117,7 @@ export default function Dashboard() {
 
         <a
           href="/gps"
-          className="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
+          className="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-6 p-8 rounded-2xl shadow-xl block hover:scale-105 transition"
         >
           <h2 className="text-2xl font-bold mb-3">
             📍 Seguimiento GPS

@@ -128,12 +128,12 @@ export default function DashboardPaseador() {
   ).length;
 
   return (
-    <main className="min-h-screen bg-gray-100 p-10">
+    <main className="min-h-screen bg-gray-100 p-4 md:p-10">
 
-      <div className="flex justify-between items-center mb-10">
+   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
 
         <div>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-3xl md:text-4xl font-bold">
             Dashboard Paseador
           </h1>
 
@@ -149,9 +149,9 @@ export default function DashboardPaseador() {
           Cerrar Sesión
         </button>
 
-      </div>
+        </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <div className="bg-white p-6 rounded-xl shadow-lg">
 
@@ -198,7 +198,7 @@ export default function DashboardPaseador() {
                   </strong>
                 </p>
 
-                <div className="flex gap-2 mt-2">
+              <div className="flex flex-col sm:flex-row gap-2 mt-2">
 
                   <button
                     onClick={() =>
@@ -248,7 +248,7 @@ export default function DashboardPaseador() {
 
         </div>
 
-        <div className="bg-white p-6 rounded-xl shadow-lg">
+      <div className="bg-white p-5 md:p-6 rounded-xl shadow-lg">
 
           <h2 className="text-2xl font-bold mb-3">
             ⭐ Calificaciones
@@ -256,7 +256,7 @@ export default function DashboardPaseador() {
 
           {calificaciones.length > 0 ? (
             <>
-              <p className="text-5xl font-bold text-yellow-500">
+              <p className="text-4xl md:text-5xl font-bold text-yellow-500">
                 {promedio}
               </p>
 
@@ -287,7 +287,7 @@ export default function DashboardPaseador() {
             calificaciones.map((c) => (
               <div
                 key={c.id}
-                className="border-b py-3"
+                className="border-b py-3 break-words"
               >
                 <p>
                   {"⭐".repeat(

@@ -2,19 +2,20 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      <header className="bg-slate-900 text-white px-10 py-5 flex justify-between items-center shadow-lg">
+      <header className="bg-slate-900 text-white px-4 md:px-10 py-5 flex flex-col md:flex-row justify-between items-center gap-4 shadow-lg">
+
         <h1 className="text-3xl font-bold">
           🐾 Huellas Urbanas
         </h1>
 
-        <nav className="flex gap-8 font-medium">
+        <nav className="flex flex-wrap justify-center gap-4 md:gap-8 font-medium">
           <a href="#">Inicio</a>
           <a href="#servicios">Servicios</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="/login"
             className="bg-white text-slate-900 px-5 py-2 rounded-lg font-bold"
@@ -31,9 +32,10 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-500 text-white py-28 px-10 text-center">
+      <section className="bg-gradient-to-r from-blue-700 via-cyan-600 to-blue-500 text-white py-20 md:py-28 px-4 md:px-10 text-center">
 
-        <h2 className="text-6xl font-extrabold mb-6">
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+
           Cuidado inteligente para tu mascota
         </h2>
 

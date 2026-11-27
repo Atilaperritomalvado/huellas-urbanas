@@ -188,13 +188,13 @@ export default function Paseos() {
 
   return (
     <ProtectedRoute>
-      <main className="min-h-screen bg-gray-100 p-10">
+      <main className="min-h-screen bg-gray-100 p-4 md:p-10">
 
-        <h1 className="text-4xl font-bold mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-10">
           Mis Paseos
         </h1>
 
-        <div className="bg-white p-8 rounded-xl shadow-lg max-w-3xl">
+        <div className="bg-white p-5 md:p-8 rounded-xl shadow-lg w-full max-w-3xl">
 
           <h2 className="text-2xl font-bold mb-6">
             Programar Paseo
@@ -208,7 +208,7 @@ export default function Paseos() {
               onChange={(e) =>
                 setFecha(e.target.value)
               }
-              className="border p-3 rounded-lg"
+              className="border p-4 rounded-lg text-base"
             />
 
             <input
@@ -217,7 +217,7 @@ export default function Paseos() {
               onChange={(e) =>
                 setHora(e.target.value)
               }
-              className="border p-3 rounded-lg"
+              className="border p-4 rounded-lg text-base"
             />
 
             <input
@@ -227,7 +227,7 @@ export default function Paseos() {
               onChange={(e) =>
                 setLugar(e.target.value)
               }
-              className="border p-3 rounded-lg"
+              className="border p-4 rounded-lg text-base"
             />
 
             <select
@@ -235,7 +235,7 @@ export default function Paseos() {
               onChange={(e) =>
                 setMascotaId(e.target.value)
               }
-              className="border p-3 rounded-lg"
+              className="border p-4 rounded-lg text-base"
             >
               <option value="">
                 Seleccionar Mascota
@@ -256,7 +256,7 @@ export default function Paseos() {
               onChange={(e) =>
                 setPaseadorId(e.target.value)
               }
-              className="border p-3 rounded-lg"
+              className="border p-4 rounded-lg text-base"
             >
               <option value="">
                 Seleccionar Paseador
@@ -284,7 +284,8 @@ export default function Paseos() {
                   ? actualizarPaseo
                   : guardarPaseo
               }
-              className="bg-blue-600 text-white p-3 rounded-lg font-bold"
+             className="bg-blue-600 text-white p-4 rounded-lg font-bold text-lg"
+
             >
               {editandoId
                 ? "Guardar Cambios"
@@ -305,7 +306,7 @@ export default function Paseos() {
             {paseos.map((paseo) => (
               <div
                 key={paseo.id}
-                className="bg-white p-6 rounded-xl shadow-lg"
+                className="bg-white p-5 md:p-6 rounded-xl shadow-lg"
               >
                 <p>
                   📅{" "}
@@ -329,6 +330,7 @@ export default function Paseos() {
                   {paseo.paseador_nombre ||
                     "Sin asignar"}
                 </p>
+                
                 <p>
                   🐕 Mascota:
                   {" "}
@@ -366,7 +368,7 @@ export default function Paseos() {
                 {paseo.estado === "Finalizado" && (
 
                 <button
-                className="bg-green-600 text-white px-4 py-2 rounded-lg mt-3"
+                className="bg-green-600 text-white px-4 py-3 rounded-lg mt-3 w-full sm:w-auto"
                 onClick={() => {
                  window.location.href =
                "/calificaciones";
@@ -377,7 +379,7 @@ export default function Paseos() {
 
                 )}
 
-                <div className="flex gap-2 mt-4">
+                <div className="flex flex-col sm:flex-row gap-2 mt-4">
 
                   <button
                     onClick={() => {

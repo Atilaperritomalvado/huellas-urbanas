@@ -46,11 +46,11 @@ export default function Login() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
+   <main className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
 
-      <div className="bg-white p-10 rounded-xl shadow-lg w-96">
+    <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg w-full max-w-md mx-4">
 
-        <h1 className="text-3xl font-bold text-center mb-8">
+    <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
           Iniciar Sesión
         </h1>
 
@@ -61,7 +61,7 @@ export default function Login() {
             placeholder="Correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border p-3 rounded-lg"
+            className="border p-4 rounded-lg text-base"
           />
 
           <input
@@ -69,12 +69,12 @@ export default function Login() {
             placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="border p-3 rounded-lg"
+            className="border p-4 rounded-lg text-base"
           />
 
           <button
             onClick={iniciarSesion}
-            className="bg-blue-600 text-white p-3 rounded-lg font-bold"
+            className="bg-blue-600 text-white p-4 rounded-lg font-bold text-lg"
           >
             Ingresar
           </button>

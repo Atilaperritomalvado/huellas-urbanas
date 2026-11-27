@@ -49,24 +49,24 @@ export default function Paseadores() {
 
   return (
     <ProtectedRoute>
-      <main className="min-h-screen bg-gray-100 p-10">
+        <main className="min-h-screen bg-gray-100 p-4 md:p-10">
 
-        <h1 className="text-4xl font-bold mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 md:mb-10">
           Nuestros Paseadores
         </h1>
 
-        <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {paseadores.map((paseador) => (
             <div
               key={paseador.id}
-              className="bg-white p-6 rounded-xl shadow-lg"
+              className="bg-white p-5 md:p-6 rounded-xl shadow-lg"
             >
-              <div className="text-5xl mb-4">
+             <div className="text-4xl md:text-5xl mb-4">
                 🐕
               </div>
 
-              <h2 className="text-2xl font-bold">
+              <h2 className="text-xl md:text-2xl font-bold">
                 {paseador.nombre}
               </h2>
 
