@@ -39,14 +39,14 @@ export default function Home() {
           Cuidado inteligente para tu mascota
         </h2>
 
-        <p className="text-2xl max-w-4xl mx-auto">
+       <p className="text-lg md:text-2xl max-w-4xl mx-auto">
           Gestioná mascotas, programá paseos,
           seleccioná paseadores verificados
           y seguí cada actividad desde una
           única plataforma.
         </p>
 
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 mt-10">
 
           <a
             href="/registro"
